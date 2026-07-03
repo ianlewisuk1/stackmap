@@ -17,17 +17,28 @@ A full-stack engineering project designed to help identify a stack to build to e
 - Take in a project idea and recommend stack in relation to available market data
 - Job advertisement examples and stack build recs
 
-## stack choice for this build (meta I know)
+## Tech Stack
 
-StackMap uses React and TypeScript for a typed, interactive frontend; FastAPI and Pydantic for a structured backend and validation layer; PostgreSQL for relational job-advert analysis; and Docker/AWS for repeatable deployment and production-style infrastructure.
+### Frontend: TypeScript + Angular
 
-Note: The initial deployment will likely use a managed service for cost concerns, but will be built with containerization in mind moving forward to assist scalabiity. 
+TypeScript provides type safety across the frontend, while Angular gives the application a structured framework with routing, forms, services, and API communication built in.
 
-The stack was chosen because the product requires:
+### Backend: Python + Django + Django REST Framework
 
-- a responsive interface for reviewing and correcting extracted data
-- a reliable API layer for job advert submission and analysis
-- strict validation of AI-generated structured output
-- relational querying across many saved adverts
-- room to add search, scoring, dashboards, and candidate profiles
-- a deployment path that reflects real engineering environments
+Python is widely used for backend development, automation, and AI workflows. Django provides a mature backend structure, ORM, migrations, and admin tooling, while Django REST Framework exposes the backend through a clean API.
+
+### Database: PostgreSQL
+
+The application data is naturally relational. Job specs, companies, technologies, categories, and stack counts all connect to each other, making PostgreSQL a strong fit for structured querying and reliable storage.
+
+### Local Development: Docker + Docker Compose
+
+Docker allows the frontend, backend, and database to run together in a consistent local environment that closely resembles a real deployment setup.
+
+### Live Deployment: Managed SaaS Platforms
+
+The live site will use managed hosting for the frontend, backend, and database to avoid unnecessary infrastructure cost and complexity while the product is still early.
+
+### Future AI Layer: LLM-assisted Extraction
+
+An AI-assisted extraction layer can help identify, categorize, and normalize technology mentions from messy job descriptions, making the analysis faster and more consistent.
