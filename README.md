@@ -1,44 +1,35 @@
 # stackmap
-A full-stack engineering project designed to help identify a stack to build to enable you to target the roles you want. 
 
-## planned features
+## Local Setup
 
-- User login and data retention
-- Frontend will take in raw text from job adverts
-- Extract relevent information
-- Classify the information and roles
-- Track technology frequency as well as correlation with roles
-- Identify strength of recs
-- Recomend learning priorities
+### Prerequisites
 
-## stretch goals
+- Python 3.11+
+- pip
 
-- Project recommendation to pair with recommended stack
-- Take in a project idea and recommend stack in relation to available market data
-- Job advertisement examples and stack build recs
+### 1. Create and activate the virtual environment
 
-## Tech Stack
+```bash
 
-### Frontend: TypeScript + Angular
+- Use Python 3 to create a local isolated Python environment in a folder called .venv
+python -m venv .venv
 
-TypeScript provides type safety across the frontend, while Angular gives the application a structured framework with routing, forms, services, and API communication built in.
+- turns that virtual environment on for your current terminal session.
+source .venv/bin/activate
+```
 
-### Backend: Python + Django + Django REST Framework
+### 2. Install dependencies
 
-Python is widely used for backend development, automation, and AI workflows. Django provides a mature backend structure, ORM, migrations, and admin tooling, while Django REST Framework exposes the backend through a clean API.
+```bash
+pip install -r backend/requirements.txt
+```
 
-### Database: PostgreSQL
+### 3. Run the Django development server
 
-The application data is naturally relational. Job specs, companies, technologies, categories, and stack counts all connect to each other, making PostgreSQL a strong fit for structured querying and reliable storage.
+```bash
+cd backend
+python manage.py migrate
+python manage.py runserver
+```
 
-### Local Development: Docker + Docker Compose
-
-Docker allows the frontend, backend, and database to run together in a consistent local environment that closely resembles a real deployment setup.
-
-### Live Deployment: Managed SaaS Platforms
-
-The live site will use managed hosting for the frontend, backend, and database to avoid unnecessary infrastructure cost and complexity while the product is still early.
-
-### Future AI Layer: LLM-assisted Extraction
-
-An AI-assisted extraction layer can help identify, categorize, and normalize technology mentions from messy job descriptions, making the analysis faster and more consistent.
+The API will be available at `http://127.0.0.1:8000/`.
