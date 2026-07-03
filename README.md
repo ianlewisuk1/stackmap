@@ -28,7 +28,9 @@ pip install -r backend/requirements.txt
 
 ```bash
 cd backend
+- this is to create the necessary db tables tha django needs by default, SQLite is used by default
 python manage.py migrate
+- this is to actually run the dev server
 python manage.py runserver
 ```
 
