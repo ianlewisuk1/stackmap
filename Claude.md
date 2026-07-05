@@ -21,6 +21,7 @@ StackMap is a job-description analysis app. Users paste job descriptions, the ap
 - Prefer simple, maintainable code.
 - Add tests for meaningful backend logic.
 - Update documentation when setup or architecture changes.
+- Do not push to GitHub, user to control all pushes. 
 
 ## AI Workflow
 

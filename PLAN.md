@@ -42,3 +42,13 @@ The live site will use managed hosting for the frontend, backend, and database t
 ### Future AI Layer: LLM-assisted Extraction
 
 An AI-assisted extraction layer can help identify, categorize, and normalize technology mentions from messy job descriptions, making the analysis faster and more consistent.
+
+## MVP Scope Decisions
+
+Before starting implementation, the following scope questions were resolved:
+
+- **Extraction approach:** Keyword/dictionary matching against a curated technology list, not LLM-based extraction. Deterministic and free of API cost/latency. The LLM-assisted extraction layer above remains a future upgrade, not part of the MVP.
+- **Data model:** Start minimal — a job description, a curated technology list, and which technologies were matched in each job description. Company, Role, Category, and stack-count tables are deferred until this core pipeline is proven out.
+- **Auth:** User accounts are built in from day one (not deferred), since job descriptions and their extraction results need to be tied to a user to support the "data retention" feature above.
+
+No implementation plan has been written yet — these decisions narrow the MVP scope for when that planning happens.
