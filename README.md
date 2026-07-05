@@ -1,5 +1,8 @@
 # stackmap
 
+Project documentation lives in [`docs/`](docs/) — see [`docs/project_status.md`](docs/project_status.md)
+for current progress and [`docs/architecture.md`](docs/architecture.md) for the system design.
+
 ## Local Setup
 
 ### Prerequisites
