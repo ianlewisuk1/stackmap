@@ -9,6 +9,9 @@ Format: group entries under a date heading, and tag each line with one of
 
 ## 2026-07-05
 
+- **Added:** `/update-docs` project slash command (`.claude/commands/update-docs.md`)
+  to refresh the `docs/` files after milestones/additions; listed it in `Claude.md`
+  under "Custom commands".
 - **Docs:** Added a "Keeping docs current" rule to `Claude.md` — docs in `docs/`
   are updated after major milestones/additions as part of the same change.
 - **Changed:** Moved all project docs into `docs/` (`PLAN.md`, `project_spec.md`,

@@ -18,6 +18,16 @@ Project docs live in [`docs/`](docs/):
 
 Setup/run instructions are in the root [`README.md`](README.md).
 
+### Custom commands
+
+Project slash commands live in [`.claude/commands/`](.claude/commands/). Run one by
+typing its name in the Claude Code prompt (e.g. `/update-docs`); you can add an
+optional note after it (e.g. `/update-docs finished the auth app`) that the command
+folds into its work.
+
+- `/update-docs` — review recent changes and update the `docs/` files after a
+  milestone or major addition, per "Keeping docs current" below.
+
 ### Keeping docs current
 
 After every **major milestone** (e.g. an MVP milestone met) or **major addition**
